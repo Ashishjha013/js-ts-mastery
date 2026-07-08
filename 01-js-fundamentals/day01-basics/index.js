@@ -27,3 +27,22 @@ function maxNum(arr) {
 // let arr = [1, 56, 34, 20, 95];
 let arr = [-5, -10, -2];
 // console.log(`The largest number in the array is: ${maxNum(arr)}`);
+
+// Problem #3: Write a Function that checks if a string is a palindrome or not.
+
+function isPalindrome(str) {
+  let left = 0;
+  let right = str.length - 1;
+
+  while (left <= right) {
+    if (str[left] !== str[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+}
+
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("hello")); // false
